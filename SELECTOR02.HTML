@@ -1,0 +1,106 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+
+    /* 그룹 선택자 "," */
+    P{ COLOR: RED; }
+    STRONG { COLOR: RED; } */
+
+    P STRONG { COLOR: YELLOW; }
+    
+    P STRONG SPAN { COLOR: GREEN; }
+
+    /* 자식 선택자 ">" */
+    div > P { COLOR: WHITE; }
+    
+    .TOP-DIV > P { COLOR: BLACK; } 
+
+    /* 하위 선택자 " " 띄워쓰기(공백) */
+    
+    .TOP-DIV P { COLOR: ORANGE; }
+    .TOP-DIV SPAN { COLOR: BLUE; }
+    
+    /* 인접 형제 선택자 "+" */
+    
+    P + SPAN { COLOR: PURPLE; }
+    
+    /* 일반 형제 선택자 "~" */
+    
+    P ~ SPAN { COLOR: PINK; }
+    
+    /* 가상 요소 선택자 :: BEFORE, :: AFTER  */
+    
+    P::before { CONTENT: 
+        COLOR:""
+    COLOR: RED; }
+
+    #vr-p::after
+    { CONTENT: " ...!";
+    COLOR: BLUE; }
+
+
+    /* 가상 클래스 선택자 */
+    A:link { COLOR: RED; }
+    A:visited { COLOR: PURPLE; }
+    
+
+    a:hover { COLOR: ORANGE; }
+    a:active { COLOR: GREEN; }
+</style>
+
+
+
+
+
+
+<body>
+
+    <div class="top-div">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span1</span>
+        <span>span2</span>
+
+        <div>
+            <p>p3</p>
+            <p id="vr-p">p4</p>
+            <strong>strong</strong>
+            <span>span3</span>
+        </div>
+
+        <div>
+            <strong>strong2</strong>
+            <span>span4</span>
+        </div>
+
+    </div>
+
+    <p>p5</p>
+
+    <a href="https://www.samsungsvc.co.kr/">삼성서비스</a>
+    <a href="https://www.lge.co.kr/">LG전자</a>
+    <a href="https://www.naver.com">네이버</a>
+
+    <br><br>
+
+    <input type="text" value="input1 value"> <br>
+    <input type="text" value="input1 value" disabled> <br>
+
+    <br>
+
+    <input type="checkbox" class="chk"><span>출근</span><br>
+    <input type="checkbox" class="chk"><span>퇴근</span><br>
+
+    <input type="checkbox" class="chk" id="retire"><label for="retire">조퇴</label><br>
+    <label>
+        <input type="checkbox" class="chk">
+        <span>조퇴</span>
+    </label><br>
+</body>
+</html>
